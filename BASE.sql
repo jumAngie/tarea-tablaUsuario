@@ -104,6 +104,40 @@ END
 
 
 
+EXEC UDP_USUARIOS_INSERT 'Maria','Gomez','mar','123',1,1
+EXEC UDP_USUARIOS_INSERT 'Angie','Campos','AgC','321',0,1
+
+EXEC UDP_USUARIOS_INSERT 'Sarahi','Inestroza','Sara','JJJ',1,1
+EXEC UDP_USUARIOS_INSERT 'Jason','Rivera','Json','Qwe11',0,1
+
+EXEC UDP_USUARIOS_INSERT 'Esdra','Alvarez','Esdrinha','123',1,1
+EXEC UDP_USUARIOS_INSERT 'Alberth','Castillo','AVG','XXX',0,1
+
+
+GO
+
+
+
+
+
+
+ CREATE OR ALTER PROCEDURE UDP_ELIMINAR
+ @usu_Id		INT
+ AS
+ BEGIN
+ DECLARE @usu_Estado BIT = 0;
+
+ UPDATE [dbo].[tbUsuarios] SET [usu_Estado] = @usu_Estado WHERE [usu_Id]= @usu_Id
+
+ END
+
+ GO
+
+
+ 
+
+
+
 
 
 
